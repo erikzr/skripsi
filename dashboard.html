@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Deteksi Kecelakaan</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles if needed */
+        .chart {
+            height: 300px;
+            background: #e2e8f0; /* Light gray */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="p-6 max-w-7xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">Dashboard Deteksi Kecelakaan</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+            <div class="bg-white p-4 rounded shadow">
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 3h0m8.293-7.293a1 1 0 00-1.414 0L12 13.586 5.121 6.707a1 1 0 00-1.414 1.414L12 16.414l8.293-8.293a1 1 0 000-1.414z" /></svg>
+                    <h2 class="text-lg font-semibold">Kecelakaan Hari Ini</h2>
+                </div>
+                <p class="text-3xl font-bold mt-2">7</p>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h0m8.293-7.293a1 1 0 00-1.414 0L12 13.586 5.121 6.707a1 1 0 00-1.414 1.414L12 16.414l8.293-8.293a1 1 0 000-1.414z" /></svg>
+                    <h2 class="text-lg font-semibold">CCTV Aktif</h2>
+                </div>
+                <p class="text-3xl font-bold mt-2">42/45</p>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12V4m0 8h8m-8 0h-8" /></svg>
+                    <h2 class="text-lg font-semibold">Waktu Respons Rata-rata</h2>
+                </div>
+                <p class="text-3xl font-bold mt-2">5.2 menit</p>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h0m8.293-7.293a1 1 0 00-1.414 0L12 13.586 5.121 6.707a1 1 0 00-1.414 1.414L12 16.414l8.293-8.293a1 1 0 000-1.414z" /></svg>
+                    <h2 class="text-lg font-semibold">Laporan Tertunda</h2>
+                </div>
+                <p class="text-3xl font-bold mt-2">3</p>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-white p-4 rounded shadow">
+                <h2 class="text-xl font-semibold mb-4">Tren Kecelakaan</h2>
+                <div class="chart">
+                    <!-- Insert Chart.js or other chart library here -->
+                    <p>Chart would go here.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white p-4 rounded shadow">
+                <h2 class="text-xl font-semibold mb-4">Peta Kecelakaan Terkini</h2>
+                <div class="chart">
+                    <img src="https://via.placeholder.com/400x300" alt="Peta Kecelakaan" class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white p-4 rounded shadow">
+            <h2 class="text-xl font-semibold mb-4">Kejadian Terbaru</h2>
+            <table class="w-full">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="p-2 text-left">Waktu</th>
+                        <th class="p-2 text-left">Lokasi</th>
+                        <th class="p-2 text-left">Jenis Kecelakaan</th>
+                        <th class="p-2 text-left">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="p-2">10:30 AM</td>
+                        <td class="p-2">Jl. Sudirman No. 123</td>
+                        <td class="p-2">Tabrakan Depan</td>
+                        <td class="p-2"><span class="bg-yellow-200 px-2 py-1 rounded">Dalam Penanganan</span></td>
+                    </tr>
+                    <tr class="bg-gray-100">
+                        <td class="p-2">09:15 AM</td>
+                        <td class="p-2">Jl. Thamrin No. 45</td>
+                        <td class="p-2">Tergelincir</td>
+                        <td class="p-2"><span class="bg-green-200 px-2 py-1 rounded">Selesai</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
